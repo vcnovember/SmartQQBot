@@ -39,13 +39,8 @@ def display_QRCode(path):
     #     qr = qrcode.QRCode()
     #     qr.border = 1
 
-
-    try:
-        from PIL import Image
-        img = Image.open(path)
-        img.show()
-    except ImportError:
-        print '缺少PIL模块, 可使用sudo pip install PIL尝试安装'
+    import webbrowser
+    webbrowser.open(path)
 
 
     # def _printQR(self, mat):
